@@ -26,6 +26,7 @@ module.exports = {
             patterns: [
                 {from: 'src/default.html', to: 'default.html'},
                 {from: 'src/assets/favicon', to: 'assets/favicon'},
+                {from: 'src/assets/png', to: 'assets/png'}
             ],
         }),
     ]

@@ -112,14 +112,14 @@ nav ul li a::after {
 }
 
 .main-container {
-  @apply flex flex-col items-center;
+  @apply flex flex-wrap justify-center items-start max-w-[1440px];
     overflow-y: auto;
-
+    background-color: #fff;
 }
 
 /* Sections */
 section {
-  @apply text-center w-[1440px];
+  @apply text-center w-[720px] max-h-[420px];
   padding: 40px;
   background-color: #fff;
   scroll-margin-top: 149px;
