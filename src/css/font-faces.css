@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'kondorital';
+    src: url('../assets/fonts/kondor/kondorital.ttf') format('truetype');
+    src: url('../assets/fonts/kondor/kondorital.woff2') format('woff2'),
+        url('../assets/fonts/kondor/kondorital.woff') format('woff'),
+        url('../assets/fonts/kondor/kondorital.eot#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'open-sauce';
+    src: url('../assets/fonts/open-sauce/OpenSauceSans-Light.ttf') format('truetype');
+    src: url('../assets/fonts/open-sauce/OpenSauceSans-Light.woff2') format('woff2'),
+        url('../assets/fonts/open-sauce/OpenSauceSans-Light.woff') format('woff'),
+        url('../assets/fonts/open-sauce/OpenSauceSans-Light.eot#iefix') format('embedded-opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'open-sauce';
+    src: url('../assets/fonts/open-sauce/OpenSauceSans-Regular.ttf') format('truetype');
+    src: url('../assets/fonts/open-sauce/OpenSauceSans-Regular.woff2') format('woff2'),
+        url('../assets/fonts/open-sauce/OpenSauceSans-Regular.woff') format('woff'),
+        url('../assets/fonts/open-sauce/OpenSauceSans-Regular.eot#iefix') format('embedded-opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'open-sauce';
+    src: url('../assets/fonts/open-sauce/OpenSauceSans-Medium.ttf') format('truetype');
+    src: url('../assets/fonts/open-sauce/OpenSauceSans-Medium.woff2') format('woff2'),
+        url('../assets/fonts/open-sauce/OpenSauceSans-Medium.woff') format('woff'),
+        url('../assets/fonts/open-sauce/OpenSauceSans-Medium.eot#iefix') format('embedded-opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    /* openSauceSans-Semibold*/
+    font-family: 'open-sauce';
+    src: url('../assets/fonts/open-sauce/OpenSauceSans-Semibold.ttf') format('truetype');
+    src: url('../assets/fonts/open-sauce/OpenSauceSans-Semibold.woff2') format('woff2'),
+        url('../assets/fonts/open-sauce/OpenSauceSans-Semibold.woff') format('woff'),
+        url('../assets/fonts/open-sauce/OpenSauceSans-Semibold.eot#iefix') format('embedded-opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

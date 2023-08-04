@@ -1,7 +1,8 @@
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-    entry: ['./src/js/app.js', './src/css/styles.css'],
+    entry: ['./src/js/app.js', './src/css/styles.css', './src/css/tailwind.css'],
     mode: 'development',
     output: {
         path: `${__dirname}/dist`,
@@ -16,21 +17,17 @@ module.exports = {
                     'css-loader',
                     'postcss-loader', // postcss.config.js
                 ],
-            },
-            // {
-            //     test: /\.(ttf|eot|woff2?|otf)$/,
-            //     use: {
-            //         loader: 'url-loader',
-            //         options: {
-            //             name: '/dist/[name].[hash].[ext]',
-            //             limit: 10000
-            //         }
-            //     }
-            // },
+            }
         ],
     },
     plugins: [
-        new NodePolyfillPlugin()
+        new NodePolyfillPlugin(),
+        new CopyWebpackPlugin({
+            patterns: [
+                {from: 'src/default.html', to: 'default.html'},
+                {from: 'src/assets/favicon', to: 'assets/favicon'},
+            ],
+        }),
     ]
 
 };

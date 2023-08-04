@@ -1,21 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@font-face {
-  font-family: 'kondorital';
-  src: url('../assets/fonts/kondorital.ttf') format('truetype');
-  src: url('../assets/fonts/kondorital.eot#iefix') format('embedded-opentype'),
-        url('../assets/fonts/kondorital.woff2') format('woff2'),
-        url('../assets/fonts/kondorital.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
+@import url(font-faces.css);
 
 /* Global styles */
 body {
-  font-family: "Open-Sans", sans-serif;
+  font-family: "open-sauce", "Open-Sans", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f5f5f5;
@@ -44,6 +31,14 @@ a {
   text-decoration: none;
 }
 
+.kondorital {
+    font-family: kondorital;
+}
+
+.open-sauce {
+    font-family: open-sauce;
+}
+
 /* Header */
 header {
   @apply sticky top-0 w-full bg-gray-100 p-5 text-center shadow-md;
@@ -51,7 +46,7 @@ header {
   background: linear-gradient(90deg, rgba(70,65,232,1) 12%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(255,0,0,1) 88%);
 }
 header::after {
-  background-image: url('../assets/honeycomb-shade.svg');
+  background-image: url('../assets/svg/honeycomb-shade.svg');
   background-repeat: no-repeat;
   
   content: "";
@@ -64,7 +59,7 @@ header::after {
 }
 
 header::before {
-  background-image: url('../assets/honeycomb-shade.svg');
+  background-image: url('../assets/svg/honeycomb-shade.svg');
   background-repeat: no-repeat;
   
   content: "";
@@ -117,11 +112,14 @@ nav ul li a::after {
 }
 
 .main-container {
+  @apply flex flex-col items-center;
     overflow-y: auto;
+
 }
 
 /* Sections */
 section {
+  @apply text-center w-[1440px];
   padding: 40px;
   background-color: #fff;
   scroll-margin-top: 149px;
@@ -144,10 +142,27 @@ table th, table td {
   border-bottom: 1px solid #ddd;
 }
 
+section{
+  @apply flex flex-col items-center;
+}
+
 /* Live Stream */
 section#live-stream iframe {
   width: 100%;
   height: 400px;
+}
+
+/* Tickets */
+section#live-stream a {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  transition: background-color 0.3s;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Tickets */

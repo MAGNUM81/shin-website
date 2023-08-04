@@ -1,3 +1,3 @@
-require('../css/styles.css')
-require('file-loader?name=[name].[ext]!../default.html');
+require('../css/tailwind.css');
+require('../css/styles.css');
 require('./main.js');
