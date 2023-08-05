@@ -94,6 +94,10 @@ section#live-stream a {
   letter-spacing: 1px;
 }
 
+section#live-stream a:hover {
+  background-color: #0056b3;
+}
+
 /* Tickets */
 section#tickets a {
   display: inline-block;
