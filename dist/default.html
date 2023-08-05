@@ -18,18 +18,24 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body class="flex flex-col">
-  <header>
-    <h1>K1 Shin #1 EXPERIENCE</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">À Propos</a></li>
-        <li><a href="#schedule">Horaire</a></li>
-        <li><a href="#live-stream">Événement</a></li>
-        <li><a href="#tickets">Billets</a></li>
-        <li><a href="#contact">Contact</a></li>
+<body class="flex flex-col overflow-x-hidden">
+  <header class="flex justify-around items-center lg:justify-start lg:flex-col">
+    <h1 class="hidden lg:block">K1 Shin #1 EXPERIENCE</h1>
+    <nav class="hidden lg:block max-w-[75%]">
+      <div id="nav-links" class="flex flex-wrap justify-center items-center gap-3">
+        <a href="#about">À Propos</a>
+        <a href="#schedule">Horaire</a>
+        <a href="#live-stream">Événement</a>
+        <a href="#tickets">Billets</a>
+        <a href="#contact">Contact</a>
       </ul>
     </nav>
+    <h1 class="lg:hidden">Shin</h1>
+    <button id="nav-button" class="flex flex-col justify-center gap-2 w-[50px] h-fit lg:hidden">
+      <span class="w-full block border-t-[3px] border-white"></span>
+      <span class="w-full block border-t-[3px] border-white"></span>
+      <span class="w-full block border-t-[3px] border-white"></span>
+    </button>
   </header>
   <div class="main-container self-center">
     <section id="about">
@@ -84,9 +90,9 @@
       <div class="flex flex-col justify-center items-center mt-[50px]">
         <p>Obtenez vos billets le plus rapidement possible en nous contactant des façons suivantes:</p>
         <div class="flex flex-col items-center gap-3 mt-[25px]">
-          <a class="w-[410px]" href="mailto:shincombat@gmail.com" target="_blank">Courriel au shincombat@gmail.com</a>
-          <a class="w-[410px]" href="tel:450-750-4545">Téléphone au 450-750-4545</a>
-          <a class="w-[410px]" href="https://www.facebook.com/shincombat">Nous contacter sur Facebook</a>
+          <a class="max-w-[410px]" href="mailto:shincombat@gmail.com" target="_blank">Courriel au shincombat@gmail.com</a>
+          <a class="max-w-[410px]" href="tel:450-750-4545">Téléphone au 450-750-4545</a>
+          <a class="max-w-[410px]" href="https://www.facebook.com/shincombat">Nous contacter sur Facebook</a>
         </div>
       </div>
     </section>
