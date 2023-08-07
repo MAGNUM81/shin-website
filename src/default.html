@@ -16,31 +16,77 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navButtonOpen = document.getElementById("nav-button-open");
+      const navButtonClose = document.getElementById("nav-button-close");
+      const mobileLogo = document.getElementById("mobile-logo");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const navLinksMob = document.getElementById("nav-links-mob");
+      const body = document.getElementById("default-body");
+      navButtonOpen.addEventListener("click", function () {
+        navButtonOpen.classList.toggle("invisible");
+        mobileMenu.classList.toggle("hidden");
+        mobileLogo.classList.toggle("invisible");
+        body.classList.toggle("overflow-y-hidden");
+      });
+      navButtonClose.addEventListener("click", function () {
+        navButtonOpen.classList.toggle("invisible");
+        mobileMenu.classList.toggle("hidden");
+        mobileLogo.classList.toggle("invisible");
+        body.classList.toggle("overflow-y-hidden");
+      });
+      navLinksMob.addEventListener("click", function () {
+        navButtonClose.click();
+      });
+    });
+  </script>
 </head>
 
-<body class="flex flex-col overflow-x-hidden">
-  <header class="flex justify-around items-center lg:justify-start lg:flex-col">
+<body id="default-body" class="flex flex-col overflow-x-hidden">
+  <header class="flex justify-between items-center lg:justify-start lg:flex-col">
     <h1 class="hidden lg:block">K1 Shin #1 EXPERIENCE</h1>
     <nav class="hidden lg:block max-w-[75%]">
       <div id="nav-links" class="flex flex-wrap justify-center items-center gap-3">
-        <a href="#about">À Propos</a>
-        <a href="#schedule">Horaire</a>
+        <a class="bg-skewed" href="#about">À Propos</a>
+        <a href="#schedule">Carte des combats</a>
         <a href="#live-stream">Événement</a>
         <a href="#tickets">Billets</a>
         <a href="#contact">Contact</a>
-      </ul>
+      </div>
     </nav>
-    <h1 class="lg:hidden">Shin</h1>
-    <button id="nav-button" class="flex flex-col justify-center gap-2 w-[50px] h-fit lg:hidden">
+    <!--mobile header-->
+    <h1 id="mobile-logo" class="lg:hidden w-[105px] text-left">Shin</h1>
+    <button id="nav-button-open"
+      class="flex flex-col justify-center gap-2 p-2 h-[50px] w-[50px] lg:hidden backdrop-blur rounded-[10px]">
       <span class="w-full block border-t-[3px] border-white"></span>
       <span class="w-full block border-t-[3px] border-white"></span>
       <span class="w-full block border-t-[3px] border-white"></span>
     </button>
   </header>
+  <div id="mobile-menu"
+    class="fixed top-0 left-0 w-full z-[9999] hidden lg:hidden bg-gray-300 bg-opacity-10 backdrop-blur">
+    <div class="flex justify-between items-center p-5">
+      <h1 class="lg:hidden w-[105px] text-left text-white">Shin</h1>
+      <button id="nav-button-close"
+        class="flex flex-col relative justify-center gap-2 p-2 h-[50px] w-[50px] lg:hidden rounded-[10px]">
+        <span class="absolute w-full block border-t-[3px] border-white left-0 top-[50%] rotate-45"></span>
+        <span class="absolute w-full block border-t-[3px] border-white left-0 top-[50%] rotate-[-45deg]"></span>
+      </button>
+    </div>
+
+    <nav id="nav-links-mob" class="flex flex-col justify-around items-center gap-3 m-5">
+      <a class="w-[80%] text-center" href="#about">À Propos</a>
+      <a class="w-[80%] text-center" href="#schedule">Carte des combats</a>
+      <a class="w-[80%] text-center" href="#live-stream">Événement</a>
+      <a class="w-[80%] text-center" href="#tickets">Billets</a>
+      <a class="w-[80%] text-center" href="#contact">Contact</a>
+    </nav>
+  </div>
   <div class="main-container self-center">
     <section id="about">
       <h2>À propos</h2>
-      <div class="flex flex-col justify-center items-center mt-[50px]">
+      <div class="flex flex-col justify-center items-center shadow p-5 rounded-md">
         <p class="max-w-[600px]">Chez Shin Combat, notre but est de faire briller les arts martiaux au Québec et à
           l'international. Que ce soit le Kickboxing, le Muay Thai, le Combat Submission Wrestling (CSW) ou le Jiu
           Jitsu, nous nous engageons à répandre les valeurs qui font des pratiquants de ces sports des êtres humains
@@ -49,9 +95,9 @@
     </section>
 
     <section id="schedule">
-      <h2>Carte des combats - 9 septembre 2023</h2>
-      <div class="flex flex-col justify-center items-center mt-[50px]">
-        <p>La carte des combats n'est pas encore disponible.<br> <a href="https://fb.me/e/30vv99uiC">Mettez l'événement
+      <h2>Carte des combats</h2>
+      <div class="flex flex-col justify-center items-center shadow p-5 rounded-md">
+        <p>La carte des combats du 9&nbsp;septembre&nbsp;2023 n'est pas encore disponible.<br> <a href="https://fb.me/e/30vv99uiC">Mettez l'événement
             Facebook à votre calendrier </a>pour ne pas manquer sa mise en ligne!</p>
         <table class="hidden">
           <tr>
@@ -79,18 +125,21 @@
 
     <section id="live-stream">
       <h2>Événement</h2>
-      <div class="flex flex-col justify-center items-center mt-[50px]">
-        <p>Mettez l'événement à votre calendrier!</p>
-        <a class="mt-[25px]" href="https://fb.me/e/30vv99uiC">Événement Facebook</a>
+      <div class="flex flex-col justify-center items-center gap-2 max-w-[300px] lg:max-w-[400px]">
+        <div class="flex flex-col gap-2 p-5 shadow rounded-md">
+          <img src="assets/png/affiche-main.png" alt="affiche-main.png">
+          <a href="https://fb.me/e/30vv99uiC">Événement Facebook</a>
+        </div>
       </div>
     </section>
 
     <section id="tickets">
       <h2>Billets</h2>
-      <div class="flex flex-col justify-center items-center mt-[50px]">
+      <div class="flex flex-col justify-center items-center p-5 shadow rounded-md">
         <p>Obtenez vos billets le plus rapidement possible en nous contactant des façons suivantes:</p>
         <div class="flex flex-col items-center gap-3 mt-[25px]">
-          <a class="max-w-[410px]" href="mailto:shincombat@gmail.com" target="_blank">Courriel au shincombat@gmail.com</a>
+          <a class="max-w-[410px]" href="mailto:shincombat@gmail.com" target="_blank">
+            Courriel au shincombat@gmail.com</a>
           <a class="max-w-[410px]" href="tel:450-750-4545">Téléphone au 450-750-4545</a>
           <a class="max-w-[410px]" href="https://www.facebook.com/shincombat">Nous contacter sur Facebook</a>
         </div>
@@ -99,15 +148,15 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <div class="flex flex-col justify-center items-center mt-[50px]">
+      <div class="flex flex-col justify-center items-center p-5 shadow rounded-md">
         <p>Si vous avez des questions ou des demandes, veuillez nous contacter:</p>
         <ul class="text-left mt-3">
-          <li>Email: <a href="mailto:shincombat@gmail.com">shincombat@gmail.com</a></li>
-          <li>Téléphone: +1 450-750-4545</li>
-          <li>Facebook: <a href="https://www.facebook.com/shincombat">Shin Combat</a></li>
+          <li><b>Email:</b> <a href="mailto:shincombat@gmail.com">shincombat@gmail.com</a></li>
+          <li><b>Téléphone:</b> +1 450-750-4545</li>
+          <li><b>Facebook:</b> <a href="https://www.facebook.com/shincombat">Shin Combat</a></li>
         </ul>
       </div>
-      
+
     </section>
   </div>
   <footer>

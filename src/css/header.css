@@ -1,23 +1,23 @@
 /* Header */
 
 header {
-  @apply relative z-0 lg:sticky top-0 w-full bg-gray-100 p-5 text-center shadow-md;
+  @apply z-0 sticky top-0 w-full bg-gray-100 p-5 text-center shadow-md;
   overflow: hidden;
-  background: linear-gradient(90deg, rgba(70,65,232,1) 12%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(255,0,0,1) 88%);
+  background: linear-gradient(90deg, rgba(70,65,232,0.8) 12%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(255,0,0,0.8) 88%);
 }
 
 header::after {
   background-image: url('../assets/svg/honeycomb-shade.svg');
   
   content: "";
-  @apply top-[-40px] right-0 w-[15%] h-[150%] bg-repeat-y;
+  @apply top-[-40px] right-0 w-[15%] h-[150%] bg-repeat-y opacity-80;
   @apply absolute md:bg-no-repeat md:top-[-20%] md:right-0 md:w-[16%] md:h-[150%] z-[-1];
 }
 
 header::before {
   background-image: url('../assets/svg/honeycomb-shade.svg');
   content: "";
-  @apply top-[-30px] left-0 w-[15%] h-[150%] bg-repeat-y;
+  @apply top-[-30px] left-0 w-[15%] h-[150%] bg-repeat-y opacity-80;
   @apply absolute md:bg-no-repeat md:top-[-30%] md:left-0 md:w-[16%] md:h-[150%] z-[-1] rotate-180;
 }
 
@@ -27,21 +27,20 @@ header h1 {
     @apply max-w-[80%] lg:mx-auto lg:mb-[20px];
 }
 
-#nav-links {
+#nav-links,#nav-links-mob {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  @apply p-5 lg:p-0 lg:m-0;
 }
 
-#nav-links a {
+#nav-links a,#nav-links-mob a {
   @apply relative shrink-0 px-2.5 py-2.5 bg-transparent text-white font-semibold uppercase tracking-[1px];
 }
 
-#nav-links a:hover:after {
+#nav-links a:hover:after,#nav-links-mob a:hover:after {
   background-color: #501ab6;
 }
 
-#nav-links a::after {
+#nav-links a::after,#nav-links-mob a::after {
   /*skewed background*/
   content: "";
   position: absolute;

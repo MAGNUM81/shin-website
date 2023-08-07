@@ -41,15 +41,14 @@ a {
 }
 
 .main-container {
-  @apply flex flex-wrap justify-center items-start max-w-[390px] lg:max-w-[1440px];
+  @apply flex flex-wrap justify-center items-start max-w-full lg:max-w-[1440px];
     overflow-y: auto;
     background-color: #fff;
 }
 
 /* Sections */
 section {
-  @apply text-center w-[390px] lg:w-[720px];
-  padding: 40px;
+  @apply flex flex-col gap-10 text-center w-[390px] lg:w-[720px] p-[20px] lg:p-[40px];
   background-color: #fff;
   scroll-margin-top: 149px;
   overflow: initial;
