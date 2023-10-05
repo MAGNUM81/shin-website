@@ -1,1 +1,2 @@
-DirectoryIndex default.php
+SetEnvIf Request_URI "^/((default\.php)?$|dist/)" ALLOWED
+Require env ALLOWED
