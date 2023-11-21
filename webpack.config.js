@@ -25,6 +25,9 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {from: 'src/default.html', to: 'default.html'},
+                {from: 'src/ticket-shop.html', to: 'ticket-shop.html'},
+                {from: 'src/default.html', to: 'default.php'},
+                {from: 'src/ticket-shop.html', to: 'ticket-shop.php'},
                 {from: 'src/assets/favicon', to: 'assets/favicon'},
                 {from: 'src/assets/png', to: 'assets/png'}
             ],
